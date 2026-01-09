@@ -1,1 +1,29 @@
 REadme
+# Studiul Comparativ al Algoritmilor pentru Problema Arborelui Steiner
+**Analiza Algoritmilor - Proiect 2025**
+**Studenți:** [Nume Student 1], [Nume Student 2] (Grupa XXX)
+
+## 1. Descriere
+Acest proiect implementează și compară trei abordări diferite pentru rezolvarea problemei **Steiner Tree** în grafuri neorientate:
+1. **Soluție Exactă:** Bazată pe explorarea submulțimilor de puncte Steiner și calculul MST (complexitate exponențială).
+2. **Euristică 1 (Metric Closure):** Algoritm de aproximare cu factor 2, bazat pe distanțe minime între terminale.
+3. **Euristică 2 (Greedy):** Abordare incrementală de tip "Shortest Path Heuristic" (Takahashi-Matsuyama).
+
+## 2. Structura Arhivei
+Arhiva proiectului este organizată astfel:
+
+```text
+proiect_steiner/
+├── README.md               # Acest fișier (instrucțiuni de utilizare)
+├── Raport.pdf              # Documentația tehnică și analiza rezultatelor
+├── src/                    # Codul sursă C
+│   ├── main.c              # Entry point, măsurare timp și calcul eroare relativă
+│   ├── utils.c / .h        # Funcții auxiliare (Citire, Floyd-Warshall, Kruskal)
+│   ├── exact.c             # Implementarea algoritmului Exact
+│   ├── metric.c            # Implementarea algoritmului Metric Closure
+│   ├── greedy.c            # Implementarea algoritmului Greedy
+│   └── Makefile            # Reguli de compilare automată
+└── tests/                  # Scripturi de testare și generare date
+    ├── generator.py        # Script Python pentru generarea testelor (.txt)
+    ├── run_all.sh          # Script Bash pentru benchmark automat
+    └── in/                 # Directorul unde vor fi generate testele
